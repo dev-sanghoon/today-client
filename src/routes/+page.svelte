@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import { marked } from 'marked';
+
+  /** @type {import('./$types').PageData} */
+  export let data;
+  
+  const content = marked.parse(data.content);
+</script>
+
+<h1>Habits of little punk</h1>
+<p>{@html content}</p>
