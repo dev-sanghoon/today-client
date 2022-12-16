@@ -1,11 +1,13 @@
 <script>
-  import { marked } from 'marked';
-
   /** @type {import('./$types').PageData} */
   export let data;
-  
-  const content = marked.parse(data.content);
+
+  let { thumbs } = data;
 </script>
 
 <h1>Habits of little punk</h1>
-<p>{@html content}</p>
+<ul>
+  {#each thumbs as thumb}
+    <li>{thumb.id}</li>
+  {/each}
+</ul>

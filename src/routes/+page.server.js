@@ -3,21 +3,16 @@ import axios from 'axios'
  
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
-//   const post = await getPostFromDatabase(params.slug);
-  async function getData() {
-    try {
-      const response = await axios.get('http://localhost:3000/');
-      return response.data;
-    } catch (error) {
-      console.error(error);
-    }
+  async function getLogList() {
+    const response = await axios.get('http://localhost:3000/api');
+    // const response = await axios.get('/api');
+    return { thumbs: response.data };
   }
 
-  const data = await getData();
-  console.log("data:", data);
+  const logList = await getLogList();
 
-  if (data) {
-    return data;
+  if (logList) {
+    return logList;
   }
  
   throw error(404, 'Not found');
