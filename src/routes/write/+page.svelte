@@ -1,13 +1,13 @@
 <script>
-    import axios from 'axios';
+	import axios from 'axios';
 
-    let content = '';
+	let content = '';
 
-    async function uploadLog() {
-        await axios.post('/api/log', { content });
-        content = '';
-    }
+	async function uploadLog() {
+		await axios.post('/api/log', { content });
+		content = '';
+	}
 </script>
 
-<textarea bind:value={content}></textarea>
+<textarea bind:value={content} />
 <button on:click={uploadLog}>Submit</button>

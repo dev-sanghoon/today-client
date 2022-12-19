@@ -1,13 +1,13 @@
 <script>
-  /** @type {import('./$types').PageData} */
-  export let data;
+	/** @type {import('./$types').PageData} */
+	export let data;
 
-  let { thumbs } = data;
+	let { thumbs } = data;
 </script>
 
 <h1>Habits of little punk</h1>
 <ul>
-  {#each thumbs as thumb}
-    <li>{thumb.id}</li>
-  {/each}
+	{#each thumbs as thumb}
+		<li>{thumb.id}</li>
+	{/each}
 </ul>
