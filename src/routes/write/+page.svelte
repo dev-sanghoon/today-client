@@ -4,7 +4,7 @@
 	let content = '';
 
 	async function uploadLog() {
-		await axios.post('/api/log', { content });
+		await axios.post('/api/blog', { content });
 		content = '';
 	}
 </script>
