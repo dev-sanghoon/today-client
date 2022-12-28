@@ -6,7 +6,7 @@ export async function load({ params }) {
 	async function getLogList() {
 		const response = await axios.get('http://localhost:3000/api/feeds');
 		// const response = await axios.get('/api');
-		return { thumbs: response.data };
+		return { feeds: response.data };
 	}
 
 	const logList = await getLogList();
