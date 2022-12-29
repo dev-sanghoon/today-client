@@ -8,6 +8,10 @@
 <h1>Habits of little punk</h1>
 <ul>
 	{#each feeds as feed}
-		<li>{feed.title}</li>
+		<li>
+			<p>
+				<a href="/article/{feed.article}">{feed.title}</a>
+			</p>
+		</li>
 	{/each}
 </ul>
