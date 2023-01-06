@@ -22,6 +22,13 @@ export async function load() {
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
-		console.log('action executed', data);
+		const id = data.get('id');
+		const password = data.get('password');
+		const response = await axios.post(
+			'http://127.0.0.1:3000/api/login',
+			{ id, password },
+			{ withCredentials: true }
+		);
+		console.log('login response:', response.data);
 	}
 };
