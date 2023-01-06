@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import axios from 'axios';
 
 /** @type {import('./$types').PageServerLoad} */
-export async function load({ params }) {
+export async function load() {
 	async function getLogList() {
 		const response = await axios.get('http://localhost:3000/api/feeds');
 		// const response = await axios.get('/api');
@@ -17,3 +17,11 @@ export async function load({ params }) {
 
 	throw error(404, 'Not found');
 }
+
+/** @type {import('./$types').Actions} */
+export const actions = {
+	default: async ({ request }) => {
+		const data = await request.formData();
+		console.log('action executed', data);
+	}
+};
