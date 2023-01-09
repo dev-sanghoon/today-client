@@ -1,5 +1,5 @@
 <script>
-	import { enhance } from '$app/forms';
+	import axios from 'axios';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -7,14 +7,14 @@
 	let { feeds } = data;
 	let id = '';
 	let password = '';
+
+	async function doLogin() {
+		await axios.post('/api/login', { id, password }, { withCredentials: true });
+	}
 </script>
 
 <div>
-	<form use:enhance method="POST">
-		<input name="id" type="text" placeholder="id" bind:value={id} required />
-		<input name="password" type="password" placeholder="password" bind:value={password} required />
-		<button type="submit">Submit</button>
-	</form>
+	<button on:click={doLogin}>Login</button>
 </div>
 <h1>Habits of little punk</h1>
 <ul>
