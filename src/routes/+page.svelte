@@ -14,6 +14,8 @@
 </script>
 
 <div>
+	<input bind:value={id} />
+	<input type="password" bind:value={password} />
 	<button on:click={doLogin}>Login</button>
 </div>
 <h1>Habits of little punk</h1>
