@@ -4,16 +4,19 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	let { feeds } = data;
+	let { feeds, currentUser } = data;
 	let id = '';
 	let password = '';
 
 	async function doLogin() {
-		await axios.post('/api/login', { id, password }, { withCredentials: true });
+		const response = await axios.post('/api/login', { id, password }, { withCredentials: true });
+		if (response.data.success) {
+			currentUser = response.data.user;
+		}
 	}
 </script>
 
-<div>
+<div hidden={!!currentUser}>
 	<input bind:value={id} />
 	<input type="password" bind:value={password} />
 	<button on:click={doLogin}>Login</button>
