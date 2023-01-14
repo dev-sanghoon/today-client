@@ -2,6 +2,7 @@
 	import axios from 'axios';
 
 	let content = '';
+	let preview = '';
 	let result = '';
 
 	async function uploadLog() {
@@ -14,12 +15,19 @@
 		}
 		result = '실패';
 	}
+
+	async function previewArticle() {
+		const response = await axios.post('/api/article/preview', { content });
+		preview = response.data.content;
+	}
 </script>
 
-<div>
+<div class="container">
 	<textarea bind:value={content} />
+	<div class="preview">{@html preview}</div>
 </div>
 <div>
+	<button on:click={previewArticle}>Preview</button>
 	<button on:click={uploadLog}>Submit</button>
 </div>
 <div>
