@@ -35,9 +35,19 @@
 </div>
 
 <style>
+	.container {
+		display: flex;
+	}
+	.preview {
+		width: 50%;
+		margin: auto 5%;
+		/* padding: 5px; */
+		padding: 0% 1%;
+		border: 1px solid grey;
+	}
 	textarea {
-		width: 100%;
-		height: 30em;
+		width: 50%;
+		min-height: 20em;
 		resize: none;
 	}
 </style>
