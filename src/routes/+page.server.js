@@ -4,7 +4,7 @@ import axios from 'axios';
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ locals }) {
 	async function getLogList() {
-		const response = await axios.get('http://127.0.0.1:3000/api/feeds');
+		const response = await axios.get('http://127.0.0.1:8080/api/feeds');
 		return { feeds: response.data };
 	}
 
