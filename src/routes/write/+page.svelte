@@ -7,7 +7,7 @@
 
 	async function uploadLog() {
 		result = '저장 중';
-		const response = await axios.post('/api/article', { content });
+		const response = await axios.post('/api/articles', { content });
 		if (response.data.success) {
 			content = '';
 			result = '성공';

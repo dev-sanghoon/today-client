@@ -6,7 +6,7 @@
 	let password = '';
 
 	async function doLogin() {
-		const response = await axios.post('/api/login', { id, password }, { withCredentials: true });
+		const response = await axios.post('/api/auth', { id, password }, { withCredentials: true });
 		if (response.data.success) {
 			goto('/');
 		}

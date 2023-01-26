@@ -6,7 +6,7 @@ export async function handle({ event, resolve }) {
 	const accessToken = event.cookies.get(COOKIE_NAME);
 	if (accessToken) {
 		const { data } = await axios({
-			url: 'http://127.0.0.1:8080/api/user',
+			url: 'http://127.0.0.1:8080/api/auth',
 			headers: {
 				Cookie: `${COOKIE_NAME}=${accessToken}`
 			}
