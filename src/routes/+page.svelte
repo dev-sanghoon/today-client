@@ -3,7 +3,9 @@
 	export let data;
 </script>
 
-<h1>Habits of little punk</h1>
+dev.sanghoon@gmail.com
+<h1>김상훈</h1>
+
 <ul>
 	{#each data.feeds as feed}
 		<li>
