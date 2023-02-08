@@ -1,4 +1,17 @@
+@font-face {
+	font-family: 'D2 coding subset';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/D2Coding-subset.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'D2 coding subset';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/D2CodingBold-subset.woff2') format('woff2');
+}
 body {
+	font-family: D2Coding, 'D2 coding subset';
 	background-color: #232a2e;
 	color: #859289;
 	max-width: 720px;
