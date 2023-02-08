@@ -1,6 +1,9 @@
 body {
 	background-color: #232a2e;
 	color: #859289;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
 }
 a {
 	color: #3a94c5;
