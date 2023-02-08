@@ -1,0 +1,26 @@
+body {
+	background-color: #232a2e;
+	color: #859289;
+}
+a {
+	color: #3a94c5;
+}
+h1,
+h2,
+h3 {
+	color: #dbbc7f;
+}
+strong {
+	font-weight: normal;
+	color: #d3c6aa;
+	background-color: #543a48;
+}
+input,
+textarea {
+	color: #d3c6aa;
+	background-color: #543a48;
+}
+button {
+	color: #514045;
+	background-color: #859289;
+}

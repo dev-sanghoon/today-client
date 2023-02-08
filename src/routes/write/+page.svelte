@@ -15,41 +15,14 @@
 </script>
 
 <div class="container">
-	<textarea class="text-input" bind:value={content} />
+	<textarea bind:value={content} />
 	<div class="preview">{@html marked.parse(content)}</div>
 </div>
 <div>
-	<button class="submit-button" on:click={uploadLog}>Submit</button>
+	<button on:click={uploadLog}>Submit</button>
 </div>
 
 <style>
-	:global(body) {
-		background-color: #232a2e;
-		color: #859289;
-	}
-	:global(body) {
-		background-color: #232a2e;
-		color: #859289;
-	}
-	:global(a) {
-		color: #859289;
-	}
-	:global(h1, h2, h3) {
-		color: #dbbc7f;
-	}
-	:global(strong) {
-		font-weight: normal;
-		color: #d3c6aa;
-		background-color: #543a48;
-	}
-	.text-input {
-		color: #d3c6aa;
-		background-color: #543a48;
-	}
-	.submit-button {
-		color: #514045;
-		background-color: #859289;
-	}
 	.container {
 		display: flex;
 	}
