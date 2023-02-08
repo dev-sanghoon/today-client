@@ -30,5 +30,6 @@
 		margin-right: 30px;
 		font-weight: bold;
 		color: #e69875;
+		text-decoration-line: underline;
 	}
 </style>
