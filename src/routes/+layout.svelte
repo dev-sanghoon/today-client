@@ -3,7 +3,7 @@
 </script>
 
 <nav class="header">
-	<h2 class="title">Cape.Coder</h2>
+	<a class="title" href="/">Cape.Coder</a>
 	<div class="categories">
 		<a class="category-item" href="/about">About</a>
 	</div>
@@ -22,6 +22,11 @@
 		margin-right: max(20%, 100px);
 		white-space: nowrap;
 		color: #e67e80;
+		display: block;
+		font-size: 1.5em;
+		margin-top: 0.83em;
+		margin-bottom: 0.83em;
+		font-weight: bold;
 	}
 	.categories {
 		display: flex;
