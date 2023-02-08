@@ -4,7 +4,7 @@
 </script>
 
 <div class="header">
-	<h2 class="title">Cape Coder</h2>
+	<h2 class="title">Cape.Coder</h2>
 	<div class="categories">
 		<p class="category-item">About</p>
 	</div>
