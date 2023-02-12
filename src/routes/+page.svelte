@@ -6,8 +6,11 @@
 <ul class="feeds">
 	{#each data.feeds as feed}
 		<div>
-			<a class="feed-title" href="/article/{feed.article}">{feed.title}</a>
-			<p class="feed-summary">{feed.summaries.join(' ')}</p>
+			<div class="feed-title-container">
+				<div>[{feed.uploadTimeStr}]</div>
+				<a class="feed-title" href="/article/{feed.article}">{feed.title}</a>
+			</div>
+			<p class="feed-summary">{feed.summary}</p>
 		</div>
 	{/each}
 </ul>
@@ -16,7 +19,12 @@
 	.feeds {
 		padding-left: 0px;
 	}
+	.feed-title-container {
+		display: flex;
+		color: #5c3f4f;
+	}
 	.feed-title {
+		padding-left: 5px;
 		color: #dbbc7f;
 	}
 	.feed-summary {
